@@ -1,4 +1,4 @@
-use diesel::{Queryable, Insertable};
+use diesel::{Queryable, Insertable, Identifiable};
 
 #[derive(Debug, Queryable, Identifiable, Insertable)]
 #[table_name = "todos"]

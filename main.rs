@@ -1,6 +1,9 @@
 use actix_files as fs;
 use actix_web::{App, HttpServer};
+mod db;
 mod routes;
+mod handlers;
+mod models;
 
 use routes::todo_routes::config;
 
