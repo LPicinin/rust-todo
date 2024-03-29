@@ -7,8 +7,8 @@ mod models;
 
 use routes::todo_routes::config;
 
-#[actix_web::main]
-async fn main() -> std::io::Result<()> {
+#[tokio::main]
+fn main() -> std::io::Result<()> {
     HttpServer::new(|| {
         App::new()
             .configure(config)

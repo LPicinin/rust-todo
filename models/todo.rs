@@ -1,14 +1,17 @@
+#[macro_use]
+extern crate diesel;
+
 use diesel::{Queryable, Insertable, Identifiable};
 
-#[derive(Debug, Queryable, Identifiable, Insertable)]
-#[table_name = "todos"]
+#[derive(Debug)]
+#[table_name = "todos"] // This attribute should work now
 pub struct Todo {
     pub id: i32,
     pub title: String,
     pub completed: bool,
 }
 
-#[derive(Debug, Insertable)]
+#[derive(Debug)]
 #[table_name = "todos"]
 pub struct NewTodo {
     pub title: String,

@@ -1,6 +1,5 @@
 use actix_web::{web, HttpResponse};
 use diesel::prelude::*;
-use crate::db::establish_connection;
 use crate::models::todo::NewTodo;
 use crate::routes::todo_routes::Item;
 

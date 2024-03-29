@@ -1,5 +1,11 @@
 use diesel::prelude::*;
+use diesel::sqlite::SqliteConnection;
+
 
 pub fn establish_connection() -> SqliteConnection {
-    // Implemente a lógica de conexão com o banco de dados aqui
+    let database_url = "todoDB.sqlite";
+
+    // Establish a connection to the database
+    SqliteConnection::establish(database_url)
+        .expect("Failed to connect to database")
 }
